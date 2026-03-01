@@ -18,9 +18,9 @@ jobs:
 
       - name: 23f1002806@ds.study.iitm.ac.in Daily Commit Step
         run: |
-          echo "Daily update at $(date)" >> daily_log.txt
+          echo "Run at $(date)" >> daily_log.txt
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add daily_log.txt
-          git commit -m "Automated daily commit" || echo "No changes to commit"
+          git commit -m "Automated daily commit $(date)"
           git push
